@@ -24,7 +24,9 @@ app.get("/", (req, res) => {
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true, // enable set cookie
+    methods:["GET","POST","PUT","DELETE"]
 }));
+app.options("", cors());
 // Middleware for parsing JSON data in requests due to which we can access JSON data from req.body
 // Set limit because I am sending images from frontend 
 app.use(express.json({ limit: '1000mb' }));

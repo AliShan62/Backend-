@@ -17,7 +17,7 @@ process.on('uncaughtException', (error) => {
 //console.log(youtube.com)
 
 //For give path of config.env file 
-dotenv.config({ path: "backend/config/config.env" })
+dotenv.config({ path: "config/config.env" })
 
 //For Database Connection
 connectDatabase()
